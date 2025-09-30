@@ -8,6 +8,7 @@ import {
 } from "@/config/redux/reducer/authReducer";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { BASE_URL } from "@/config";
 
 function DashboardLayout({ children }) {
   const router = useRouter();
@@ -112,7 +113,10 @@ function DashboardLayout({ children }) {
                   className={styles.extraContainer__profile}
                   key={profile.id}
                 >
-                  <img src={profile.user.profilePicture} alt="" />
+                  <img
+                    src={`${BASE_URL}/${profile.user.profilePicture}`}
+                    alt=""
+                  />
                   <p>{profile.user.name}</p>
                 </div>
               );
