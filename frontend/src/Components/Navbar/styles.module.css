@@ -1,0 +1,123 @@
+.container {
+    padding: 1.2rem;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* Simple network/connection icon */
+.navBar h1::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #CD8987 0%, #b57573 100%);
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Network dots pattern inside icon */
+.navBar h1::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    background: 
+        radial-gradient(circle at 3px 3px, white 2px, transparent 2px),
+        radial-gradient(circle at 13px 3px, white 2px, transparent 2px),
+        radial-gradient(circle at 3px 13px, white 2px, transparent 2px),
+        radial-gradient(circle at 13px 13px, white 2px, transparent 2px);
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+
+.navBarOptionContainer {
+    display: flex;
+    align-items: center;
+}
+
+.buttonJoin {
+    padding-block: 0.6rem;
+    padding-inline: 1.2rem;
+    background: #CD8987;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttonJoin:hover {
+    background: #b57573;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttonJoin p {
+    margin: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .navBar h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navBar h1::before {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .navBar h1::after {
+        left: 6px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .navBar p {
+        font-size: 0.85rem;
+    }
+    
+    .buttonJoin {
+        padding-block: 0.5rem;
+        padding-inline: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.8rem;
+    }
+    
+    .navBar h1 {
+        font-size: 1.2rem;
+    }
+    
+    .navBar h1::before {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .navBar h1::after {
+        left: 4px;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .navBar p {
+        font-size: 0.75rem;
+    }
+}

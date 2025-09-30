@@ -1,0 +1,415 @@
+.container {
+    padding: 1.5rem;
+    background: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backDropContainer {
+    width: 100%;
+    height: 250px;
+    background: url("https://picsum.photos/1200/400");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.backDropContainer img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    left: 3rem;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.backDrop__overlay {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -75px;
+    left: 3rem;
+    z-index: 4;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.backDrop__overlay:hover {
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.profileContainer__details {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profileContainer__details > div:first-child {
+    display: flex;
+    gap: 2rem;
+}
+
+.profileContainer__details > div:first-child > div:first-child {
+    flex: 1;
+}
+
+.profileContainer__details > div:first-child > div:last-child {
+    flex: 0 0 300px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgb(230, 230, 230);
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.profileContainer__details > div:first-child > div:last-child > h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.nameEdit {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nameEdit:focus {
+    border-bottom-color: rgb(2, 93, 158);
+}
+
+.profileContainer__details input {
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    background: transparent;
+}
+
+.profileContainer__details textarea {
+    outline: none;
+    border: 1px solid rgb(230, 230, 230);
+    padding: 1rem;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 8px;
+    resize: vertical;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.profileContainer__details textarea:focus {
+    border-color: rgb(2, 93, 158);
+    box-shadow: 0 0 0 3px rgba(2, 93, 158, 0.1);
+}
+
+.postCard {
+    margin-bottom: 1rem;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgb(250, 250, 250);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    background: rgb(245, 245, 245);
+}
+
+.card__profileContainer {
+    flex-shrink: 0;
+}
+
+.card__profileContainer > img {
+    width: 54px;
+    height: 54px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card > p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.workHistory {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.workHistory > h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.workHistoryContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.workHistoryCard {
+    min-width: 200px;
+    padding: 1.2rem 1.8rem;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid rgb(230, 230, 230);
+    transition: all 0.3s ease;
+}
+
+.workHistoryCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgb(2, 93, 158);
+}
+
+.workHistoryCard > p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.workHistoryCard > p:first-child {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.workHistoryCard > p:last-child {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.addWorkButton {
+    border: 2px dashed rgb(200, 200, 200);
+    padding: 1.2rem 1.8rem;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #666;
+}
+
+.addWorkButton:hover {
+    border-color: rgb(2, 93, 158);
+    color: rgb(2, 93, 158);
+    background: rgb(250, 250, 250);
+}
+
+.updateBtn {
+    padding: 0.8rem 1.5rem;
+    background: rgb(2, 93, 158);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.updateBtn:hover {
+    background: rgb(1, 73, 125);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 93, 158, 0.3);
+}
+
+.connectedBtn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid rgb(2, 93, 158);
+    background: transparent;
+    color: rgb(2, 93, 158);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.connectedBtn:hover {
+    background: rgb(2, 93, 158);
+    color: white;
+}
+
+.commentsContainer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.allCommentsContainer {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.inputField {
+    padding: 0.9rem 1.2rem;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid rgb(230, 230, 230);
+    width: 100%;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.inputField:focus {
+    border-color: rgb(2, 93, 158);
+    box-shadow: 0 0 0 3px rgba(2, 93, 158, 0.1);
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .profileContainer__details > div:first-child {
+        flex-direction: column;
+    }
+
+    .profileContainer__details > div:first-child > div:last-child {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
+/* Tablet/Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .backDropContainer {
+        height: 200px;
+    }
+
+    .backDropContainer img {
+        width: 120px;
+        height: 120px;
+        bottom: -60px;
+        left: 1.5rem;
+        border-width: 4px;
+    }
+
+    .backDrop__overlay {
+        width: 120px;
+        height: 120px;
+        bottom: -60px;
+        left: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .profileContainer__details {
+        padding-top: 4rem;
+    }
+
+    .nameEdit {
+        font-size: 1.5rem;
+    }
+
+    .workHistoryCard {
+        min-width: 150px;
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    .backDropContainer {
+        height: 150px;
+        border-radius: 15px;
+    }
+
+    .backDropContainer img {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        left: 1rem;
+        border-width: 3px;
+    }
+
+    .backDrop__overlay {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .profileContainer__details {
+        padding-top: 3.5rem;
+    }
+
+    .nameEdit {
+        font-size: 1.3rem;
+    }
+
+    .profileContainer__details textarea {
+        font-size: 0.9rem;
+    }
+
+    .workHistoryContainer {
+        gap: 0.8rem;
+    }
+
+    .workHistoryCard {
+        min-width: 100%;
+        padding: 1rem;
+    }
+
+    .addWorkButton {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .allCommentsContainer {
+        padding: 1.5rem;
+    }
+
+    .updateBtn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,60 @@
+POST http://localhost:9090/register HTTP/1.1
+content-Type: application/json
+
+{
+    "username":"harsha123",
+    "password":"h@123",
+    "email":"harsha@gmail.com",
+    "name":"Harsha"
+}
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email":"siddharth@example.com",
+    "password":"1234"
+}
+
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+content-Type: application/json
+
+{
+    "email":"harsha@gmail.com",
+    "password":"h@123"
+}
+###
+
+GET http://localhost:9090/get_user_and_profile HTTP/1.1
+content-Type: application/json
+
+{
+    "token":"3925efbafbc22332057f60a782ee0761b68eef64e065354cf74241847d1625a0"
+}
+
+###
+
+POST http://localhost:9090/update_profile_data HTTP/1.1
+content-Type: application/json
+
+{
+    "token":"3925efbafbc22332057f60a782ee0761b68eef64e065354cf74241847d1625a0",
+    "bio": "Tech leader",
+    "currentPost": "CTO",
+    "pastWork": [
+        { "company": "Microsoft", "position": "CTO", "years": "2+" }
+    ],
+    "education": [
+        { "school": "BVRIT", "degree": "B.Tech", "fieldOfStudy": "2022-2026" }
+    ]
+}
+
+###
+GET http://localhost:9090/get_all_user_profiles HTTP/1.1

@@ -1,0 +1,224 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.cardContainer {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.cardContainer__left {
+    flex: 0.6;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardleft__heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #00488b;
+    text-align: center;
+}
+
+.cardContainer__left > p:nth-child(2) {
+    text-align: center;
+    margin-bottom: 1rem;
+    min-height: 24px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.inputContainers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.inputRow {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inputRow .inputField {
+    flex: 1;
+}
+
+.inputField {
+    padding: 0.9rem 1.2rem;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.inputField:focus {
+    border-color: #00488b;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 72, 139, 0.1);
+}
+
+.inputField::placeholder {
+    color: #999;
+}
+
+.buttonWithOutline {
+    padding: 0.9rem 1.5rem;
+    border-radius: 10px;
+    background: #00488b;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    color: white;
+    text-align: center;
+}
+
+.buttonWithOutline:hover {
+    background: #003a6f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 72, 139, 0.3);
+}
+
+.buttonWithOutline:active {
+    transform: translateY(0);
+}
+
+.buttonWithOutline p {
+    margin: 0;
+}
+
+.cardContainer__right {
+    flex: 0.4;
+    background: linear-gradient(135deg, #00488b 0%, #003a6f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cardContainer__right > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cardContainer__right .buttonWithOutline {
+    background: white;
+    color: #00488b;
+    border: 2px solid white;
+    max-width: 200px;
+}
+
+.cardContainer__right .buttonWithOutline:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .cardContainer {
+        flex-direction: column;
+        max-width: 500px;
+        min-height: auto;
+    }
+
+    .cardContainer__left {
+        flex: 1;
+        padding: 2rem 1.5rem;
+    }
+
+    .cardContainer__right {
+        flex: 1;
+        padding: 2rem 1.5rem;
+        min-height: 200px;
+    }
+
+    .cardleft__heading {
+        font-size: 1.6rem;
+    }
+
+    .inputRow {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .inputContainers {
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem;
+        min-height: 100vh;
+    }
+
+    .cardContainer {
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .cardContainer__left {
+        padding: 1.5rem 1rem;
+    }
+
+    .cardContainer__right {
+        padding: 1.5rem 1rem;
+        min-height: 180px;
+    }
+
+    .cardleft__heading {
+        font-size: 1.4rem;
+    }
+
+    .inputField {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .buttonWithOutline {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .cardContainer__right > p {
+        font-size: 1rem;
+    }
+
+    .cardContainer__right .buttonWithOutline {
+        max-width: 180px;
+        font-size: 0.9rem;
+    }
+}

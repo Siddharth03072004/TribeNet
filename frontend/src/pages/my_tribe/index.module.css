@@ -1,0 +1,198 @@
+.container {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.container > h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.container > h1 {
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.userCard {
+    display: flex;
+    width: 100%;
+    padding: 1.2rem;
+    background: white;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.userCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: rgb(2, 93, 158);
+}
+
+.userCard > div {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.profilePicture {
+    flex-shrink: 0;
+}
+
+.profilePicture > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(245, 245, 245);
+    transition: all 0.3s ease;
+}
+
+.userCard:hover .profilePicture > img {
+    border-color: rgb(2, 93, 158);
+}
+
+.userInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.userInfo > h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    margin-bottom: 0.3rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.userInfo > p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.acceptButton {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid rgb(2, 93, 158);
+    background: rgb(2, 93, 158);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.acceptButton:hover {
+    background: rgb(1, 73, 125);
+    border-color: rgb(1, 73, 125);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(2, 93, 158, 0.3);
+}
+
+.acceptButton:active {
+    transform: scale(0.98);
+}
+
+.myConnections {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .container > h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .userCard {
+        padding: 1rem;
+    }
+
+    .profilePicture > img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .userInfo > h3 {
+        font-size: 1rem;
+    }
+
+    .userInfo > p {
+        font-size: 0.85rem;
+    }
+
+    .acceptButton {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    .container > h4 {
+        font-size: 1.2rem;
+    }
+
+    .container > h1 {
+        font-size: 1rem;
+    }
+
+    .userCard {
+        padding: 0.8rem;
+    }
+
+    .userCard > div {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+
+    .profilePicture > img {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+
+    .userInfo {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .userInfo > h3 {
+        font-size: 0.95rem;
+    }
+
+    .userInfo > p {
+        font-size: 0.8rem;
+    }
+
+    .acceptButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .userCard:hover {
+        transform: translateY(-2px);
+    }
+}

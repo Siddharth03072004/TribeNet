@@ -1,0 +1,429 @@
+.scrollComponent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+    padding-bottom: 2rem;
+}
+
+.createPostContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 1.2rem;
+    gap: 1.3rem;
+    align-items: center;
+    background: rgb(255, 246, 246);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 120px;
+}
+
+.uploadButton {
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    background: rgb(2, 93, 158);
+    color: white;
+    border-radius: 10px;
+    padding-inline: 1.2rem;
+    padding-block: 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.uploadButton:hover {
+    background: rgb(1, 73, 125);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 93, 158, 0.3);
+}
+
+.userProfile {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.Fab {
+    background: rgb(0, 59, 130);
+    border-radius: 50%;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Fab:hover {
+    background: rgb(2, 93, 158);
+    transform: scale(1.05);
+}
+
+.Fab > svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.textAreaOfContent {
+    flex: 1;
+    min-height: 60px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.8rem 1.2rem;
+    outline: none;
+    resize: vertical;
+    font-size: 0.95rem;
+}
+
+.textAreaOfContent:focus {
+    border-color: rgb(2, 93, 158);
+    box-shadow: 0 0 0 3px rgba(2, 93, 158, 0.1);
+}
+
+.postsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.singleCard {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.singleCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.singleCard__profileContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+}
+
+.singleCard__profileContainer > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.singleCard__profileContainer > div {
+    flex: 1;
+}
+
+.singleCard__profileContainer p {
+    margin: 0;
+    margin-bottom: 0.3rem;
+}
+
+.singleCard__image {
+    margin-top: 1rem;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.singleCard__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.optionsContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid rgb(240, 240, 240);
+}
+
+.singleOption__optionsContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.singleOption__optionsContainer:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.singleOption__optionsContainer > svg {
+    width: 20px;
+    height: 20px;
+    color: #666;
+}
+
+.singleOption__optionsContainer > p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.commentsContainer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.allCommentsContainer {
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    position: relative;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.allCommentsContainer > h2 {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.singleComment {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin-bottom: 0.8rem;
+}
+
+.singleComment:last-child {
+    border-bottom: none;
+}
+
+.singleComment__profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.singleComment__profileContainer > img {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.singleComment__profileContainer > div > p {
+    margin: 0;
+    margin-bottom: 0.2rem;
+}
+
+.singleComment > p {
+    margin: 0;
+    margin-left: 3rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.postCommentContainer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: white;
+    border-top: 1px solid rgb(240, 240, 240);
+    margin-top: auto;
+}
+
+.postCommentContainer > input {
+    flex: 1;
+    height: 45px;
+    border-radius: 25px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(230, 230, 230);
+    padding: 0 1.2rem;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.postCommentContainer > input:focus {
+    border-color: rgb(2, 93, 158);
+    box-shadow: 0 0 0 3px rgba(2, 93, 158, 0.1);
+}
+
+.postCommentContainer__commentBtn {
+    background: rgb(2, 93, 158);
+    color: white;
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.postCommentContainer__commentBtn:hover {
+    background: rgb(1, 73, 125);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 93, 158, 0.3);
+}
+
+.postCommentContainer__commentBtn > p {
+    margin: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .createPostContainer {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .textAreaOfContent {
+        font-size: 0.9rem;
+        min-height: 50px;
+    }
+
+    .singleCard__profileContainer {
+        padding: 1rem;
+    }
+
+    .uploadButton {
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        gap: 1rem;
+    }
+
+    .createPostContainer {
+        flex-wrap: wrap;
+        min-height: auto;
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .userProfile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .textAreaOfContent {
+        width: 100%;
+        order: 2;
+        font-size: 0.85rem;
+    }
+
+    .Fab {
+        order: 1;
+        padding: 0.5rem;
+    }
+
+    .uploadButton {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    .singleCard__profileContainer {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+
+    .singleCard__profileContainer > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .optionsContainer {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .singleOption__optionsContainer {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .singleOption__optionsContainer > svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .allCommentsContainer {
+        width: 95%;
+        height: 90vh;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .singleComment__profileContainer > img {
+        width: 35px !important;
+        height: 35px;
+    }
+
+    .singleComment > p {
+        margin-left: 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .postCommentContainer {
+        padding: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .postCommentContainer > input {
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
+    .postCommentContainer__commentBtn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}

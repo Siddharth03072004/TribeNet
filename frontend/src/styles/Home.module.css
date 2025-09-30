@@ -1,0 +1,396 @@
+/* Three.js Canvas */
+.threeCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 1.2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient orbs */
+.gradientOrb1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(120, 115, 245, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.gradientOrb2 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 110, 196, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 10s ease-in-out infinite;
+  animation-delay: 2s;
+  z-index: 0;
+}
+
+.gradientOrb3 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(88, 86, 214, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 12s ease-in-out infinite;
+  animation-delay: 4s;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 2rem;
+  min-height: 85vh;
+  position: relative;
+  z-index: 1;
+}
+
+.mainContainer__left {
+  flex: 0.5;
+  position: relative;
+  z-index: 2;
+}
+
+.mainContainer__right {
+  flex: 0.5;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main heading with enhanced animation */
+.mainHeading {
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #ff6ec4);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Subheading */
+.subHeading {
+  color: #d1d5db;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+/* Feature tags */
+.featureTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(120, 115, 245, 0.3);
+}
+
+/* Enhanced button */
+.buttonJoin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  user-select: none;
+  background: linear-gradient(135deg, #ff6ec4 0%, #7873f5 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 110, 196, 0.4);
+}
+
+.buttonJoin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7873f5 0%, #ff6ec4 100%);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.buttonJoin:hover::before {
+  left: 0;
+}
+
+.buttonJoin:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(255, 110, 196, 0.6);
+}
+
+.buttonJoin:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.buttonJoin p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.arrowHover {
+  transform: translateX(5px);
+}
+
+/* Image wrapper with 3D effect */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.imageGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff6ec4 0%, #7873f5 100%);
+  border-radius: 30px;
+  filter: blur(40px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+/* Floating badges */
+.floatingBadge {
+  position: absolute;
+  background: linear-gradient(135deg, #ff6ec4 0%, #7873f5 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(255, 110, 196, 0.4);
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 3;
+}
+
+.badge1 {
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(135deg, #ff6ec4 0%, #ff3f8c 100%);
+}
+
+.badge2 {
+  bottom: -10px;
+  left: -10px;
+  background: linear-gradient(135deg, #7873f5 0%, #5856d6 100%);
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Decorative circles */
+.decorativeCircle1 {
+  position: absolute;
+  top: 20%;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(255, 110, 196, 0.3);
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+}
+
+.decorativeCircle2 {
+  position: absolute;
+  bottom: 20%;
+  left: -60px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(120, 115, 245, 0.3);
+  border-radius: 50%;
+  animation: spinReverse 15s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .mainContainer {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 2rem;
+  }
+
+  .mainContainer__left,
+  .mainContainer__right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .mainHeading {
+    font-size: 2.5rem;
+  }
+
+  .subHeading {
+    font-size: 1.3rem;
+  }
+
+  .featureTags {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainHeading {
+    font-size: 2rem;
+  }
+
+  .subHeading {
+    font-size: 1.1rem;
+  }
+
+  .buttonJoin {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .gradientOrb1,
+  .gradientOrb2,
+  .gradientOrb3 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .decorativeCircle1,
+  .decorativeCircle2 {
+    display: none;
+  }
+}
